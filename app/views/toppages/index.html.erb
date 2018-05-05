@@ -3,8 +3,15 @@
     <div class="cover-inner">
       <div class="cover-contents">
         <h1>DENIME LOG へようこそ！</h1>
-        <a href="" class="btn btn-success btn-lg">DENIME LOG を始める</a>
+      
+          <% unless logged_in? %>
+            <%= link_to 'DENIME LOGを始める', signup_path, class: 'btn btn-success btn-lg' %>
+          <% end %>
+          
+      
       </div>
     </div>
   </div>
 <% end %>
+
+<p>test</p>
